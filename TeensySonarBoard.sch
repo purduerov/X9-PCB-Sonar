@@ -2658,6 +2658,46 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="MotherboardParts">
+<packages>
+<package name="KEYSTONE_FUSE_3587">
+<smd name="P$1" x="-6.731" y="3.0353" dx="1.5748" dy="2.8194" layer="1"/>
+<smd name="P$2" x="-6.731" y="-3.0353" dx="1.5748" dy="2.8194" layer="1"/>
+<smd name="P$3" x="6.731" y="-3.0353" dx="1.5748" dy="2.8194" layer="1"/>
+<smd name="P$4" x="6.731" y="3.0353" dx="1.5748" dy="2.8194" layer="1"/>
+<wire x1="-8.89" y1="5.08" x2="8.89" y2="5.08" width="0.127" layer="21"/>
+<wire x1="8.89" y1="5.08" x2="8.89" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="8.89" y1="-5.08" x2="-8.89" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="-8.89" y1="-5.08" x2="-8.89" y2="5.08" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="KEYSTONE_FUSE_3587" prefix="F" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KEYSTONE_FUSE_3587">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1 P$2"/>
+<connect gate="G$1" pin="P$2" pad="P$3 P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2693,6 +2733,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$1" library="BackplaneParts" deviceset="MAX3491" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="F1" library="MotherboardParts" deviceset="KEYSTONE_FUSE_3587" device="" value="2A"/>
 </parts>
 <sheets>
 <sheet>
@@ -2715,7 +2756,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND8" gate="1" x="162.56" y="96.52"/>
 <instance part="GND6" gate="1" x="109.22" y="132.08"/>
 <instance part="AMPBRD" gate="G$1" x="58.42" y="121.92"/>
-<instance part="SUPPLY1" gate="G$1" x="15.24" y="68.58"/>
+<instance part="SUPPLY1" gate="G$1" x="17.78" y="73.66"/>
 <instance part="GND1" gate="1" x="15.24" y="38.1"/>
 <instance part="GND3" gate="1" x="40.64" y="93.98"/>
 <instance part="SUPPLY3" gate="G$1" x="40.64" y="111.76"/>
@@ -2725,6 +2766,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U$1" gate="G$1" x="180.34" y="58.42"/>
 <instance part="GND10" gate="1" x="162.56" y="43.18"/>
 <instance part="SUPPLY7" gate="G$1" x="198.12" y="76.2"/>
+<instance part="F1" gate="G$1" x="17.78" y="63.5" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2810,9 +2852,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="43.18" y="53.34"/>
 </segment>
 <segment>
+<pinref part="F1" gate="G$1" pin="P$2"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<pinref part="BATT" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="68.58" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="68.58" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -2992,6 +3034,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="TEENSY2" gate="G$1" pin="5"/>
 <wire x1="160.02" y1="111.76" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
 <label x="162.56" y="111.76" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="BATT" gate="G$1" pin="2"/>
+<pinref part="F1" gate="G$1" pin="P$1"/>
+<wire x1="15.24" y1="55.88" x2="17.78" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="55.88" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
