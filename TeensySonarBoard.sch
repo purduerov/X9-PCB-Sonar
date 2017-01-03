@@ -2602,11 +2602,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="A" x="5.9185" y="5.08" dx="1.981" dy="0.533" layer="1"/>
 <smd name="VCC13" x="5.9185" y="6.35" dx="1.981" dy="0.533" layer="1"/>
 <smd name="VCC14" x="5.9185" y="7.62" dx="1.981" dy="0.533" layer="1"/>
-<wire x1="-0.1" y1="8.1" x2="-0.1" y2="-0.5" width="0.127" layer="20"/>
-<wire x1="-0.1" y1="-0.5" x2="5.9" y2="-0.5" width="0.127" layer="20"/>
-<wire x1="5.9" y1="-0.5" x2="5.9" y2="8.1" width="0.127" layer="20"/>
-<wire x1="5.9" y1="8.1" x2="-0.1" y2="8.1" width="0.127" layer="20"/>
-<circle x="1" y="7.2" radius="0.360553125" width="0.127" layer="20"/>
+<wire x1="-0.1" y1="8.1" x2="-0.1" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-0.1" y1="-0.5" x2="5.9" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="5.9" y1="-0.5" x2="5.9" y2="8.1" width="0.127" layer="21"/>
+<wire x1="5.9" y1="8.1" x2="-0.1" y2="8.1" width="0.127" layer="21"/>
+<circle x="1" y="7.2" radius="0.360553125" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
