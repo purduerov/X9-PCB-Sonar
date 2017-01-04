@@ -779,11 +779,11 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 </element>
 <element name="U$1" library="BackplaneParts" package="MAX3491" value="MAX3491" x="36.83" y="11.43"/>
 <element name="F1" library="MotherboardParts" package="KEYSTONE_FUSE_3587" value="2A" x="16.51" y="10.16"/>
-<element name="D1" library="SparkFun-LED" package="LED-0603" value="" x="-3.81" y="-10.16"/>
-<element name="D2" library="SparkFun-LED" package="LED-0603" value="" x="-3.81" y="-13.97"/>
-<element name="D3" library="SparkFun-LED" package="LED-0603" value="" x="-3.81" y="-17.78"/>
-<element name="D4" library="SparkFun-LED" package="LED-0603" value="" x="-3.81" y="-21.59"/>
-<element name="D5" library="SparkFun-LED" package="LED-0603" value="" x="-3.81" y="-25.4"/>
+<element name="D1" library="SparkFun-LED" package="LED-0603" value="" x="3.81" y="11.43" rot="R180"/>
+<element name="D2" library="SparkFun-LED" package="LED-0603" value="" x="8.89" y="21.59"/>
+<element name="D3" library="SparkFun-LED" package="LED-0603" value="" x="44.45" y="22.86" rot="R270"/>
+<element name="D4" library="SparkFun-LED" package="LED-0603" value="" x="40.64" y="22.86" rot="R270"/>
+<element name="D5" library="SparkFun-LED" package="LED-0603" value="" x="35.56" y="22.86" rot="R270"/>
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
@@ -808,20 +808,8 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <contactref element="D5" pad="C"/>
 <contactref element="D4" pad="C"/>
 <contactref element="D3" pad="C"/>
-<wire x1="27.94" y1="50.8" x2="39.37" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="25.4" y1="50.8" x2="27.94" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="6.35" y1="41.91" x2="25.4" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="3.81" y1="26.67" x2="6.35" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="4.36" y1="16.78" x2="3.81" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="12.7" y1="16.93" x2="4.36" y2="16.78" width="0" layer="19" extent="1-1"/>
-<wire x1="16.4799" y1="17.78" x2="12.7" y2="16.93" width="0" layer="19" extent="1-1"/>
-<wire x1="21.59" y1="16.93" x2="16.4799" y2="17.78" width="0" layer="19" extent="1-1"/>
-<wire x1="36.83" y1="12.7" x2="21.59" y2="16.93" width="0" layer="19" extent="1-1"/>
-<wire x1="36.83" y1="11.43" x2="36.83" y2="12.7" width="0" layer="19" extent="1-1"/>
-<wire x1="41.91" y1="2.54" x2="36.83" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-16.903" x2="4.36" y2="16.78" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-20.713" x2="-3.81" y2="-16.903" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-24.523" x2="-3.81" y2="-20.713" width="0" layer="19" extent="1-1"/>
+<contactref element="D2" pad="C"/>
+<contactref element="D1" pad="C"/>
 </signal>
 <signal name="VCC">
 <contactref element="U1" pad="1"/>
@@ -832,13 +820,27 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <wire x1="16.3799" y1="18.63" x2="16.4799" y2="18.73" width="0.4064" layer="1"/>
 <wire x1="16.4799" y1="16.83" x2="14.5" y2="16.83" width="0.4064" layer="1"/>
 <wire x1="14.5" y1="16.83" x2="12.7" y2="18.63" width="0.4064" layer="1"/>
-<wire x1="13.7287" y1="13.1953" x2="10.922" y2="16.002" width="0.4064" layer="1"/>
-<wire x1="10.922" y1="16.002" x2="10.922" y2="18.034" width="0.4064" layer="1"/>
-<wire x1="10.922" y1="18.034" x2="11.43" y2="18.542" width="0.4064" layer="1"/>
-<wire x1="11.43" y1="18.542" x2="12.612" y2="18.542" width="0.4064" layer="1"/>
 <wire x1="12.612" y1="18.542" x2="12.7" y2="18.63" width="0.4064" layer="1"/>
-<contactref element="D1" pad="C"/>
-<wire x1="-3.81" y1="-9.283" x2="13.7287" y2="13.1953" width="0" layer="19" extent="1-1"/>
+<contactref element="F1" pad="P$4"/>
+<contactref element="F1" pad="P$3"/>
+<contactref element="D1" pad="A"/>
+<wire x1="23.241" y1="7.1247" x2="23.241" y2="11.811" width="0.4064" layer="1"/>
+<wire x1="23.241" y1="12.7" x2="23.241" y2="13.1953" width="0.4064" layer="1"/>
+<wire x1="12.612" y1="18.542" x2="12.192" y2="18.542" width="0.4064" layer="1"/>
+<wire x1="12.192" y1="18.542" x2="11.43" y2="17.78" width="0.4064" layer="1"/>
+<wire x1="11.43" y1="17.78" x2="11.43" y2="15.24" width="0.4064" layer="1"/>
+<wire x1="11.43" y1="15.24" x2="12.7" y2="13.97" width="0.4064" layer="1"/>
+<wire x1="12.7" y1="13.97" x2="22.86" y2="13.97" width="0.4064" layer="1"/>
+<wire x1="22.86" y1="13.97" x2="23.241" y2="13.589" width="0.4064" layer="1"/>
+<wire x1="23.241" y1="13.589" x2="23.241" y2="13.1953" width="0.4064" layer="1"/>
+<wire x1="3.81" y1="12.307" x2="4.687" y2="11.43" width="0.4064" layer="1"/>
+<wire x1="4.687" y1="11.43" x2="6.35" y2="11.43" width="0.4064" layer="1"/>
+<via x="6.35" y="11.43" extent="1-16" drill="0.6"/>
+<wire x1="6.35" y1="11.43" x2="7.62" y2="10.16" width="0.4064" layer="16"/>
+<wire x1="7.62" y1="10.16" x2="21.59" y2="10.16" width="0.4064" layer="16"/>
+<via x="21.59" y="10.16" extent="1-16" drill="0.6"/>
+<wire x1="21.59" y1="10.16" x2="23.241" y2="11.811" width="0.4064" layer="1"/>
+<wire x1="23.241" y1="11.811" x2="23.241" y2="12.7" width="0.4064" layer="1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="TEENSY1" pad="1"/>
@@ -847,7 +849,6 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <wire x1="3.81" y1="30.48" x2="1.27" y2="27.94" width="0.4064" layer="1"/>
 <wire x1="1.27" y1="27.94" x2="1.27" y2="21.59" width="0.4064" layer="1"/>
 <wire x1="1.27" y1="21.59" x2="2.54" y2="20.32" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="20.32" x2="21.59" y2="19.05" width="0.4064" layer="1"/>
 <wire x1="3.81" y1="41.91" x2="3.81" y2="43.18" width="0.4064" layer="16"/>
 <wire x1="3.81" y1="43.18" x2="5.08" y2="44.45" width="0.4064" layer="16"/>
 <wire x1="5.08" y1="44.45" x2="29.21" y2="44.45" width="0.4064" layer="16"/>
@@ -855,7 +856,6 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <wire x1="33.02" y1="48.26" x2="33.02" y2="50.8" width="0.4064" layer="16"/>
 <contactref element="U$1" pad="VCC13"/>
 <contactref element="U$1" pad="VCC14"/>
-<wire x1="2.54" y1="20.32" x2="20.32" y2="20.32" width="0.4064" layer="1"/>
 <wire x1="42.7485" y1="17.78" x2="43.18" y2="17.78" width="0.4064" layer="1"/>
 <wire x1="23.28" y1="18.63" x2="24.13" y2="17.78" width="0.4064" layer="1"/>
 <via x="24.13" y="17.78" extent="1-16" drill="0.6"/>
@@ -866,9 +866,18 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <wire x1="38.1" y1="21.59" x2="40.64" y2="19.05" width="0.4064" layer="1"/>
 <wire x1="40.64" y1="19.05" x2="42.7485" y2="19.05" width="0.4064" layer="1"/>
 <wire x1="42.7485" y1="19.05" x2="42.7485" y2="17.78" width="0.4064" layer="1"/>
-<contactref element="D2" pad="C"/>
-<wire x1="21.59" y1="19.05" x2="23.28" y2="18.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-13.093" x2="2.54" y2="20.32" width="0" layer="19" extent="1-1"/>
+<contactref element="C2" pad="1"/>
+<contactref element="U1" pad="5"/>
+<wire x1="19.0801" y1="18.73" x2="21.49" y2="18.73" width="0.4064" layer="1"/>
+<wire x1="21.49" y1="18.73" x2="21.59" y2="18.63" width="0.4064" layer="1"/>
+<contactref element="D2" pad="A"/>
+<wire x1="2.54" y1="20.32" x2="8.497" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="8.497" y1="20.32" x2="8.89" y2="20.713" width="0.4064" layer="1"/>
+<wire x1="21.59" y1="18.63" x2="21.59" y2="19.05" width="0.4064" layer="1"/>
+<wire x1="21.59" y1="19.05" x2="20.32" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="20.32" y1="20.32" x2="9.283" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="9.283" y1="20.32" x2="8.89" y2="20.713" width="0.4064" layer="1"/>
+<wire x1="23.28" y1="18.63" x2="21.59" y2="18.63" width="0.4064" layer="1"/>
 </signal>
 <signal name="RO">
 <contactref element="TEENSY2" pad="2"/>
@@ -988,34 +997,26 @@ Created by Nick Molo for the Purdue IEEE ROV Team
 <wire x1="4.376" y1="18.796" x2="4.36" y2="18.78" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="D5" pad="A"/>
-<contactref element="TEENSY2" pad="7"/>
-<wire x1="-3.81" y1="-26.277" x2="19.05" y2="26.67" width="0" layer="19" extent="1-1"/>
+<contactref element="D3" pad="A"/>
+<contactref element="TEENSY2" pad="14"/>
+<wire x1="43.573" y1="22.86" x2="43.573" y2="23.737" width="0.3048" layer="1"/>
+<wire x1="43.573" y1="23.737" x2="43.18" y2="24.13" width="0.3048" layer="1"/>
+<wire x1="43.18" y1="24.13" x2="39.37" y2="24.13" width="0.3048" layer="1"/>
+<wire x1="39.37" y1="24.13" x2="36.83" y2="26.67" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="D4" pad="A"/>
-<contactref element="TEENSY2" pad="9"/>
-<wire x1="-3.81" y1="-22.467" x2="24.13" y2="26.67" width="0" layer="19" extent="1-1"/>
+<contactref element="TEENSY2" pad="13"/>
+<wire x1="39.763" y1="22.86" x2="39.37" y2="22.86" width="0.3048" layer="1"/>
+<wire x1="39.37" y1="22.86" x2="38.1" y2="24.13" width="0.3048" layer="1"/>
+<wire x1="38.1" y1="24.13" x2="36.83" y2="24.13" width="0.3048" layer="1"/>
+<wire x1="36.83" y1="24.13" x2="34.29" y2="26.67" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$4">
-<contactref element="D3" pad="A"/>
-<contactref element="TEENSY2" pad="11"/>
-<wire x1="-3.81" y1="-18.657" x2="29.21" y2="26.67" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$5">
-<contactref element="D1" pad="A"/>
-<contactref element="F1" pad="P$4"/>
-<contactref element="F1" pad="P$3"/>
-<wire x1="23.241" y1="7.1247" x2="23.241" y2="13.1953" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-11.037" x2="23.241" y2="7.1247" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$6">
-<contactref element="C2" pad="1"/>
-<contactref element="U1" pad="5"/>
-<wire x1="19.0801" y1="18.73" x2="21.49" y2="18.73" width="0.4064" layer="1"/>
-<wire x1="21.49" y1="18.73" x2="21.59" y2="18.63" width="0.4064" layer="1"/>
-<contactref element="D2" pad="A"/>
-<wire x1="-3.81" y1="-14.847" x2="19.0801" y2="18.73" width="0" layer="19" extent="1-1"/>
+<contactref element="D5" pad="A"/>
+<contactref element="TEENSY2" pad="12"/>
+<wire x1="34.683" y1="22.86" x2="34.683" y2="23.737" width="0.3048" layer="1"/>
+<wire x1="34.683" y1="23.737" x2="31.75" y2="26.67" width="0.3048" layer="1"/>
 </signal>
 </signals>
 </board>
